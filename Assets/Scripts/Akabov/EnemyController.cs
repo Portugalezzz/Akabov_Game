@@ -59,8 +59,11 @@ public class EnemyController : MonoBehaviour
     }
     private void AddNewAvakov()
     {
-        xPos = SetNewRandomPosition(Screen.width / -2, Screen.width / 2);
-        yPos = SetNewRandomPosition(Screen.height / -2, Screen.height / 2);
+        // xPos = SetNewRandomPosition(Screen.width / -2, Screen.width / 2);
+        xPos = SetNewRandomPosition(1280 / -2 + 75, 1280 / 2 - 75);
+        Debug.Log(Screen.width);
+        // yPos = SetNewRandomPosition(Screen.height / -2, Screen.height / 2);
+        yPos = SetNewRandomPosition(720 / -2 + 75, 720 / 2 - 75);
         transform.localPosition = new Vector3(xPos, yPos, 0);
     }
 }

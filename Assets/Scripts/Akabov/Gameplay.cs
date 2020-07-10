@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Gameplay : MonoBehaviour
 {
-    public static int enemyCounter = 1;
+    public static int enemyCounter = 0;
     public EnemySpawner Stopper;
     
     // Start is called before the first frame update
     void Start()
     {
+        enemyCounter = 1;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
        // StartCoroutine(RestartAfterSleep());
     }
@@ -22,8 +23,9 @@ public class Gameplay : MonoBehaviour
         if (enemyCounter == 0)
         {
             Stopper.StopSpawner();
-           // enemyCounter = 1;
-           // SceneManager.LoadScene("Task_2");
+            GoToMenu();
+            // enemyCounter = 1;
+            // SceneManager.LoadScene("Task_2");
             //StopMove.StopController();
         }
         else if (enemyCounter > 9)
@@ -37,8 +39,10 @@ public class Gameplay : MonoBehaviour
                 EnemyController.StopController();
 
             }
+
+            GoToMenu();
             //enemyCounter = 1;
-           // SceneManager.LoadScene("Task_2");
+            // SceneManager.LoadScene("Task_2");
             // StopMove.StopController();
 
         }
@@ -61,5 +65,10 @@ public class Gameplay : MonoBehaviour
             enemyCounter = 1;
             SceneManager.LoadScene("Task_2");
         }
+    }
+
+    void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
