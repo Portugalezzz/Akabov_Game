@@ -7,8 +7,14 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
-    guid: 26f55f13da3d9984182208fd2f0c5523
+    guid: a153e3c77d331564ba2d4abbf4cf50f3
   - enabled: 1
     path: Assets/Scenes/Akabov.unity
     guid: 3e3e30312f54ffe4694c761ded8b4599
+  - enabled: 1
+    path: Assets/Scenes/MenuWin.unity
+    guid: 00f1a5f0ba0161d4e8d58412e42dc022
+  - enabled: 1
+    path: Assets/Scenes/MenuLooses.unity
+    guid: 6ad2359808b4b84478c6b3c2a93d0b95
   m_configObjects: {}

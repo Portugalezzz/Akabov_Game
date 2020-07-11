@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class Gameplay : MonoBehaviour
 {
+
+    int maxAkabov = 9;
     public static int enemyCounter = 0;
     public EnemySpawner Stopper;
     
@@ -23,12 +27,12 @@ public class Gameplay : MonoBehaviour
         if (enemyCounter == 0)
         {
             Stopper.StopSpawner();
-            GoToMenu();
+            SceneManager.LoadScene("MenuWin");
             // enemyCounter = 1;
             // SceneManager.LoadScene("Task_2");
             //StopMove.StopController();
         }
-        else if (enemyCounter > 9)
+        else if (enemyCounter > maxAkabov)
         {
             Stopper.StopSpawner();
             EnemyController[] components = GameObject.FindObjectsOfType<EnemyController>();
@@ -40,7 +44,7 @@ public class Gameplay : MonoBehaviour
 
             }
 
-            GoToMenu();
+            SceneManager.LoadScene("MenuLooses");
             //enemyCounter = 1;
             // SceneManager.LoadScene("Task_2");
             // StopMove.StopController();
@@ -48,12 +52,13 @@ public class Gameplay : MonoBehaviour
         }
     }
 
-  /*  public void onResume()
-    {
-        enemyCounter = 1;
-        SceneManager.LoadScene("Task_2");
-    }
-    */
+    /*  public void onResume()
+      {
+          enemyCounter = 1;
+          SceneManager.LoadScene("Task_2");
+      }
+      */
+/*
     private void OnApplicationPause(bool pause)
     {
         if (pause)
@@ -66,9 +71,11 @@ public class Gameplay : MonoBehaviour
             SceneManager.LoadScene("Task_2");
         }
     }
-
+*/
+  /*
     void GoToMenu()
     {
         SceneManager.LoadScene("Menu");
     }
+    */
 }

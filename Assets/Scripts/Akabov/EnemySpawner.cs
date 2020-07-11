@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    float spawnDelay = 1;
     public GameObject NewEnemy;
-    
+    int startAkabovs = 3;
+    int startAkabovsCouter = 0;
+
+
         void Start()
     {
 
@@ -17,13 +21,20 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true)
         {
-            
-            yield return new WaitForSeconds(1f);
+            if (startAkabovsCouter < startAkabovs)
+            {
+                Instantiate(NewEnemy);
+                Gameplay.enemyCounter++;
+                startAkabovsCouter++;
+            }
+            else
+            {
+                yield return new WaitForSeconds(spawnDelay);
+                Instantiate(NewEnemy);
+                Gameplay.enemyCounter++;
 
-            Instantiate(NewEnemy);
-            Gameplay.enemyCounter++;
+            }
         }
-
         
 
     }
