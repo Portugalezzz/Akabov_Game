@@ -10,14 +10,15 @@ public class Gameplay : MonoBehaviour
 
     int maxAkabov = 9;
     public static int enemyCounter = 0;
+    public int highscore = 0;
     public EnemySpawner Stopper;
-    
+
     // Start is called before the first frame update
     void Start()
     {
         enemyCounter = 1;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
-       // StartCoroutine(RestartAfterSleep());
+        // StartCoroutine(RestartAfterSleep());
     }
 
     // Update is called once per frame
@@ -28,9 +29,8 @@ public class Gameplay : MonoBehaviour
         {
             Stopper.StopSpawner();
             SceneManager.LoadScene("MenuWin");
-            // enemyCounter = 1;
-            // SceneManager.LoadScene("Task_2");
-            //StopMove.StopController();
+            Score.showScore();
+
         }
         else if (enemyCounter > maxAkabov)
         {
@@ -45,37 +45,21 @@ public class Gameplay : MonoBehaviour
             }
 
             SceneManager.LoadScene("MenuLooses");
-            //enemyCounter = 1;
-            // SceneManager.LoadScene("Task_2");
-            // StopMove.StopController();
+
 
         }
-    }
 
-    /*  public void onResume()
-      {
-          enemyCounter = 1;
-          SceneManager.LoadScene("Task_2");
-      }
-      */
-/*
-    private void OnApplicationPause(bool pause)
-    {
-        if (pause)
+        void SaveScore()
         {
-            
+
         }
-        else
-        {
-            enemyCounter = 1;
-            SceneManager.LoadScene("Task_2");
-        }
-    }
-*/
-  /*
-    void GoToMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
-    */
+
+    }           
+         
 }
+        
+
+         
+
+
+

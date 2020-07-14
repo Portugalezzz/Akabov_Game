@@ -14,23 +14,16 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
-        //add code here (subtask 1)
         AddNewAvakov();
-
         StartCoroutine(ChangePositionDelayed());
-
-
+        
     }
 
 
 
-    void Update ()
-    {
 
-    }
     IEnumerator ChangePositionDelayed()
     {
-        //add code here (subtask 2)
         while (true)
         {
             Debug.Log("Delay started");
@@ -39,38 +32,36 @@ public class EnemyController : MonoBehaviour
             AddNewAvakov();
         }
 
-        //add code here (subtask 2)
-
+        
     }
 
     int SetNewRandomPosition(int posMin, int posMax)
     {
-        //add code here (subtask 1)
-
-        
         return Random.Range(posMin, posMax);
     }
 
     int SetNewKillSound()
     {
-        return Random.Range(0,4);
+        return Random.Range(0,12);
     }
 
     public void DestroyEnemy()
     {
-        //add code here (subtask 3)
         Destroy(transform.parent.gameObject);
         Gameplay.enemyCounter--;
         score++;
         Debug.Log("Akabov kills " + score);
-        GameObject[] KillSoundsArray = GameObject.FindGameObjectsWithTag("KillSound");
-        GameObject SoundComponent = KillSoundsArray[KillSound];
-        audioData = SoundComponent.GetComponent<AudioSource>();
-        audioData.Play();
-        
-        Debug.Log("Killsound is " + KillSound);
-        
+        if(KillSound < 4)
+        {
+            GameObject[] KillSoundsArray = GameObject.FindGameObjectsWithTag("KillSound");
+            GameObject SoundComponent = KillSoundsArray[KillSound];
+            audioData = SoundComponent.GetComponent<AudioSource>();
+            audioData.Play();
 
+            Debug.Log("Killsound is " + KillSound);
+        }
+
+        
     }
     public void StopController()
     {

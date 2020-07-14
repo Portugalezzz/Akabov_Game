@@ -562,9 +562,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 375f6395625dc8a4ab2734dd08e718b6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ec401fe0788bd5f458fcb8d911542feb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.199
+  m_Volume: 0.164
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1037,7 +1037,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 430, y: -214}
+  m_AnchoredPosition: {x: 430, y: -221}
   m_SizeDelta: {x: 329, y: 43.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &945032556
@@ -1114,7 +1114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 686, y: -214}
+  m_AnchoredPosition: {x: 686, y: -223}
   m_SizeDelta: {x: 158.9, y: 43.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &970029834
@@ -1386,8 +1386,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 237}
-  m_SizeDelta: {x: 440, y: 100}
+  m_AnchoredPosition: {x: 0, y: 233}
+  m_SizeDelta: {x: 440, y: 141.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1195399058
 MonoBehaviour:
@@ -1596,6 +1596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498569865}
   - component: {fileID: 1498569868}
+  - component: {fileID: 1498569866}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1631,6 +1632,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1028, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1498569866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498569864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321e74d44fd4e5a4bb646dd63633743b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 970029834}
 --- !u!222 &1498569868
 CanvasRenderer:
   m_ObjectHideFlags: 0
